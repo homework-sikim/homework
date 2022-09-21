@@ -44,10 +44,7 @@ func CheckData(intput string, popKey string, pushKey string) bool {
 		}
 	}
 	_, err := s.Pop()
-	if err == nil {
-		return false
-	}
-	return true
+	return err != nil
 }
 
 func main() {
