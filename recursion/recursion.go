@@ -36,8 +36,8 @@ func hanoiMove(n int, a int, b int, c int) {
 }
 
 func main() {
-	fmt.Println(factorial(6))
-	fmt.Println(fibonacci(6))
+	fmt.Println(factorial(5))
+	fmt.Println(fibonacci(5))
 
 	hanoiMove(3, 1, 2, 3)
 	fmt.Println(hanoiCnt)
