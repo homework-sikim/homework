@@ -31,9 +31,7 @@ func (b *BianryTree) Search(target int) bool {
 				break
 			}
 		}
-
 	}
-
 	return false
 }
 
