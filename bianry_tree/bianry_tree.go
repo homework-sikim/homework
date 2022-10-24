@@ -17,8 +17,7 @@ func (b *BianryTree) Search(target int) bool {
 	for {
 		if node.Data == target {
 			return true
-		}
-		if node.Data > target {
+		}else if node.Data > target {
 			if node.Left != nil {
 				node = node.Left
 			} else {
