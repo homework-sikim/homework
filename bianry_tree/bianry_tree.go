@@ -151,11 +151,13 @@ func (b *BianryTree) Delete(target int) error {
 			temp.Parent = node.Parent
 			temp.Status = node.Status
 			node = temp
+			node.Parent.Left = node
 		} else {
 			temp := node.Right
 			temp.Parent = node.Parent
 			temp.Status = node.Status
 			node = temp
+			node.Parent.Right = node
 		}
 
 		if node.Status == 0 {
