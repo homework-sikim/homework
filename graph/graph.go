@@ -55,13 +55,11 @@ func (g *Graph) Dfs() {
 	queue.PushBack(g)
 	for queue.Len() > 0 {
 		target := queue.Remove(queue.Front()).(*Graph)
-		if !target.Visited {
-			fmt.Println(target.Name)
-			target.Visited = true
-			for i := 0; i < len(target.Friends); i++ {
-				if !target.Friends[i].Visited {
-					queue.PushBack(target.Friends[i])
-				}
+		fmt.Println(target.Name)
+		target.Visited = true
+		for i := 0; i < len(target.Friends); i++ {
+			if !target.Friends[i].Visited {
+				queue.PushBack(target.Friends[i])
 			}
 		}
 	}
